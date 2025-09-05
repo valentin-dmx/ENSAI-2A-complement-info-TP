@@ -4,7 +4,7 @@ from abc import abstractmethod
 from business_object.statistic import Statistic
 
 
-class AbstractPokemon:
+class AbstractPokemon(ABC):
     """
     A Pokemon (abstract class)
     """
