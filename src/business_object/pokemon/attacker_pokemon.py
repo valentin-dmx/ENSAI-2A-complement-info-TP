@@ -1,16 +1,9 @@
-from src.business_object.pokemon.abstract_pokemon import AbstractPokemon
-from business_object.statistic import Statistic
+from business_object.pokemon.abstract_pokemon import AbstractPokemon
 
 
-class Attacker(AbstractPokemon):
-    def __init__(
-        self,
-        stat_max=None, 
-        stat_current=None, 
-        level=0, 
-        name=None):
-
-        super().__init__(self, stat_max=None, stat_current=None, level=0, name=None)
+class AttackerPokemon(AbstractPokemon):
+    def __init__(self, stat_max=None, stat_current=None, level=0, name=None):
+        super().__init__(stat_max=stat_max, stat_current=stat_current, level=0, name=name)
 
     def get_pokemon_attack_coef(self):
         return 1 + (self.speed_current + self.attack_current) / 200

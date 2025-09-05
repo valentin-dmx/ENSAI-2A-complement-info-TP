@@ -1,5 +1,5 @@
 import copy
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 
 from business_object.statistic import Statistic
 
@@ -58,6 +58,16 @@ class AbstractPokemon(ABC):
         Increase the level by one
         """
         self._level += 1
+    
+    def test_level_up(self):
+        # GIVEN
+        self._level = 1
+
+        # WHEN
+        nouveau_niveau = level_up()
+
+        # THEN
+        assert nouveau_niveau == 2
 
     def reset_actual_stat(self) -> None:
         self._stat_current = copy.deepcopy(self._stat_max)
