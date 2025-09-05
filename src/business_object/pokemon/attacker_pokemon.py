@@ -1,4 +1,5 @@
-from abstract_ pokemon import AbstractPokemon
+from abstract_pokemon import AbstractPokemon
+
 
 class Attacker(AbstractPokemon):
     def __init__(self):
